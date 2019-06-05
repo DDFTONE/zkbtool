@@ -1,1 +1,23 @@
-测试
+<!DOCTYPE html>
+<html>
+<head>
+<title>省市区三级联动</title>
+<meta charset="UTF-8">
+ 
+<script type="text/javascript" src="./JS/sheng.js"></script>
+</head>
+<body onload="setup();preselect('北京市');promptinfo();">
+        <form>
+            <select class="select" name="province" id="s1">
+              <option>请选择省份</option>
+            </select>
+            <select class="select" name="city" id="s2">
+              <option>请选择市级</option>
+            </select>
+            <select class="select" name="town" id="s3">
+              <option>请选择区县</option>
+            </select>
+            <input id="address" name="address" type="hidden" value="" />
+          <input onclick="alert(document.getElementById('address').value); return false;" type="submit" value="提交" />
+        </form>
+</body>
